@@ -108,9 +108,9 @@ namespace NetCoreGym.Controllers
 
         [HttpPost]
         [Route("login")]
-        public int login([FromBody] User req)
+        public LoginReturnToken login([FromBody] User req)
         {
-            return userHandler.Login(req.email, req.password);
+            return userHandler.returnToken(req.email, req.password);
         }
 
     }

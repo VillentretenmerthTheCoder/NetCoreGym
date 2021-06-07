@@ -1589,7 +1589,7 @@
           "ref/netstandard1.3/System.Console.dll": {}
         }
       },
-      "System.Data.SqlClient/4.8.2": {
+      "System.Data.SqlClient/4.8.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
@@ -5584,10 +5584,10 @@
         "system.console.nuspec"
       ]
     },
-    "System.Data.SqlClient/4.8.2": {
-      "sha512": "80vGtW6uLB4AkyrdVuKTXYUyuXDPAsSKbTVfvjndZaRAYxzFzWhJbvUfeAKrN+128ycWZjLIAl61dFUwWHOOTw==",
+    "System.Data.SqlClient/4.8.1": {
+      "sha512": "HKLykcv6eZLbLnSMnlQ6Os4+UAmFE+AgYm92CTvJYeTOBtOYusX3qu8OoGhFrnKZax91UcLcDo5vPrqvJUTSNQ==",
       "type": "package",
-      "path": "system.data.sqlclient/4.8.2",
+      "path": "system.data.sqlclient/4.8.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5664,7 +5664,7 @@
         "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
-        "system.data.sqlclient.4.8.2.nupkg.sha512",
+        "system.data.sqlclient.4.8.1.nupkg.sha512",
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -9237,30 +9237,32 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
       "Pomelo.EntityFrameworkCore.MySql >= 3.1.1",
       "Pomelo.EntityFrameworkCore.MySql.Design >= 1.1.2",
-      "Swashbuckle.AspNetCore >= 6.1.4",
-      "System.Data.SqlClient >= 4.8.2"
+      "Swashbuckle.AspNetCore >= 6.1.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tomcs\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\DonMa\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\GitHub\\NetCoreGym\\NetCoreGym\\NetCoreGym.csproj",
+      "projectUniqueName": "C:\\Users\\DonMa\\source\\repos\\NetCoreGym\\NetCoreGym\\NetCoreGym.csproj",
       "projectName": "NetCoreGym",
-      "projectPath": "F:\\GitHub\\NetCoreGym\\NetCoreGym\\NetCoreGym.csproj",
-      "packagesPath": "C:\\Users\\tomcs\\.nuget\\packages\\",
-      "outputPath": "F:\\GitHub\\NetCoreGym\\NetCoreGym\\obj\\",
+      "projectPath": "C:\\Users\\DonMa\\source\\repos\\NetCoreGym\\NetCoreGym\\NetCoreGym.csproj",
+      "packagesPath": "C:\\Users\\DonMa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DonMa\\source\\repos\\NetCoreGym\\NetCoreGym\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\tomcs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DonMa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9322,10 +9324,6 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.1.4, )"
-          },
-          "System.Data.SqlClient": {
-            "target": "Package",
-            "version": "[4.8.2, )"
           }
         },
         "imports": [

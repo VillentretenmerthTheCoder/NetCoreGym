@@ -10,7 +10,7 @@ namespace NetCoreGym
 {
     public class userHandler
     {
-        const string connectionString = "server=127.0.0.1;uid=root;database=Gym";
+        const string connectionString = "server=127.0.0.1;user id=Bartosz;password=Niwobiruf_34;persistsecurityinfo=True;database=gym;allowuservariables=True";
 
         //public static TicketInfo GetTicket(int id)
         //{
@@ -33,7 +33,7 @@ namespace NetCoreGym
         //    return ticket;
         //}
 
-        static public int Login(string mail, string pass)
+         public static LoginReturnToken returnToken(string mail, string pass)
         {
 
             MySqlConnection conn = new MySqlConnection(connectionString);
@@ -47,31 +47,19 @@ namespace NetCoreGym
             conn.Open();
 
             //// Read user
-            MySqlCommand cmd = new MySqlCommand("SELECT role_id FROM users where email= @mail and pass=@pass ", conn);
+            MySqlCommand cmd = new MySqlCommand("SELECT role_id,member_id FROM users where email= @mail and pass=@pass ", conn);
             cmd.Parameters.AddWithValue("@mail", mail);
             cmd.Parameters.AddWithValue("@pass", pass);
             MySqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
 
-            ////User u = new User
-            ////{
-            ////    name = name,
-
-            ////};
-            int result;
-            if (reader.HasRows)
+            LoginReturnToken token = new LoginReturnToken
             {
-                result = reader.GetInt16(0);
+                role_id = reader.GetInt16(0),
+                member_id = reader.GetInt16(1)
+            };
 
-            }
-            else
-            {
-                result = -1;
-            }
-
-
-            reader.Close();
-            return result;
+            return token;
         }
 
     }

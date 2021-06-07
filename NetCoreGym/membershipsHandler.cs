@@ -10,7 +10,7 @@ namespace NetCoreGym
 {
     public class membershipsHandler
     {
-        const string connectionString = "server=127.0.0.1;uid=root;database=Gym";
+        const string connectionString = "server=127.0.0.1;user id=Bartosz;password=Niwobiruf_34;persistsecurityinfo=True;database=gym;allowuservariables=True";
         public static TicketInfo getMembership(int id)
         {
             
@@ -27,7 +27,7 @@ namespace NetCoreGym
             //// Read user
             MySqlCommand cmd = new MySqlCommand("get_ticket_info", conn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ID", id);
+            cmd.Parameters.AddWithValue("@in_id", id);
 
             MySqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
