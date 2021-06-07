@@ -105,5 +105,14 @@ namespace NetCoreGym.Controllers
         {
             return _context.Invoices.Any(e => e.Id == id);
         }
+
+
+        [HttpPost]
+        [Route("newMemberTransaction")]
+        
+        public void async([FromBody] TransactionModel transactionModel)
+        {
+            transactionHandler.callTransaction(transactionModel);
+        }
     }
 }
